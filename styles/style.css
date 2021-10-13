@@ -36,90 +36,22 @@
     #ff5e56;
 }
 
-.text-button {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 24px;
-  color: color.theme-red;
+input[type="checkbox"]:checked {
+  background: linear-gradient(
+      255.35deg,
+      #dc3131 0.83%,
+      rgba(255, 79, 79, 0) 108.93%
+    ),
+    #ff5e56;
+  background-image: url("/check.svg");
+  box-shadow: none;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
-.text-button:hover {
-  color: color.theme-red;
-}
-
-.checkbox {
-  border: 1px solid #000000;
+input[type="checkbox"] {
+  appearance: none;
+  box-shadow: none;
+  font-size: 2em;
+  border: 1px solid #dfe3e6;
   border-radius: 6px;
-}
-
-.checkbox:checked {
-  background: backgroundColor.main-gradient;
-}
-
-.checkbox:checked {
-  background: color.theme-gray;
-  border: 1px solid color.theme-gray;
-}
-
-.big-button {
-  transition-property: background-color, border-color, color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
-  background: backgroundColor.main-gradient;
-  box-shadow: 0px 0px 24px rgba(234, 0, 41, 0.33);
-  border-radius: 0.375rem;
-  font-weight: 500;
-  line-height: 1.5rem;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  padding: 0.75rem 1.5rem;
-  color: #fff;
-}
-
-.big-button:active,
-.big-button:hover {
-  background: color.theme-red;
-}
-
-.big-button.stroke {
-  border: 1px solid #ffffff;
-  background: transparent;
-}
-.big-button.stroke:hover,
-.big-button.stroke:active {
-  background: #fff;
-  color: #000;
-}
-
-.big-button.small-text {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
-.big-button:disabled {
-  background: color.theme-gray;
-  pointer-events: none;
-  border: 1px solid color.theme-gray;
-}
-.tag {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0.375rem 0.75rem;
-  background: backgroundColor.main-gradient;
-  border-radius: 3.125rem;
-
-  font-size: 14px;
-  line-height: 24px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-
-  color: #ffffff;
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 0px 12px;
 }

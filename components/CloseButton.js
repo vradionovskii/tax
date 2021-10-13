@@ -1,7 +1,7 @@
 export default function CloseButton({ onClick }) {
   return (
     <button
-      className="absolute top-0 right-0 w-6 h-6 mt-4 mr-4"
+      className="absolute top-0 right-0 w-6 h-6 mt-4 mr-4 md:h-10 md:w-10"
       onClick={onClick}
     >
       <svg

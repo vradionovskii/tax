@@ -6,7 +6,7 @@ export default function Index() {
   const [show, setShow] = useState(false);
   return (
     <section className="flex items-center justify-center w-screen h-screen main-background-gradient">
-      <Button onClick={() => setShow(!show)} className="stroke">
+      <Button onClick={() => setShow(!show)} stroke>
         Налоговый вычет
       </Button>
       <Modal title="My Modal" onClose={() => setShow(false)} show={show}>
