@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import ReactDOM from "react-dom";
+import CloseButton from "./CloseButton";
 
-const Modal = ({ onClose, show, children, title }) => {
+const Modal = ({ onClose, show }) => {
   const closeOnEscapeKeyDown = (e) => {
     e.preventDefault();
     if ((e.charCode || e.keyCode) === 27) {
@@ -20,7 +21,7 @@ const Modal = ({ onClose, show, children, title }) => {
         <div
           onKeyDown={onClose}
           role="button"
-          className="fixed inset-0 bg-[#b3b3b3] flex items-center justify-center"
+          className="fixed inset-0 bg-[#b3b3b3] flex items-center justify-center overflow-y-scroll"
           tabIndex={0}
           onClick={onClose}
         >
@@ -28,18 +29,18 @@ const Modal = ({ onClose, show, children, title }) => {
             role="button"
             tabIndex={0}
             onKeyDown={(e) => e.stopPropagation()}
-            className="w-32 bg-white"
+            className="relative w-full min-h-screen px-4 pt-8 pb-4 md:py-8 bg-white md:max-w-[28.125rem] lg:max-w-[34.5rem] md:min-h-0 md:px-8 md:rounded-[1.875rem]"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="modal-header">
-              <h4 className="modal-title">{title}</h4>
-            </div>
-            <div className="modal-body">{children}</div>
-            <div className="modal-footer">
-              <button onClick={onClose} className="button">
-                Close
-              </button>
-            </div>
+            <CloseButton onClick={onClose} />
+            <p className="text-lg font-medium md:text-[1.75rem] pb-4">
+              Налоговый вычет
+            </p>
+            <p className="text-text-gray">
+              Используйте налоговый вычет чтобы погасить ипотеку досрочно.
+              Размер налогового вычета составляет не более 13% от своего
+              официального годового дохода.
+            </p>
           </div>
         </div>,
         document.body
