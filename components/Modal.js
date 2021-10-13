@@ -48,8 +48,8 @@ const Modal = ({ onClose, show }) => {
     ? ReactDOM.createPortal(
         <div className="fixed inset-0 flex items-center justify-center overflow-y-scroll">
           <ModalBackground onClose={onClose} />
-          <div className=" absolute top-0 md:py-[7.5rem] pointer-events-none min-h-screen md:min-h-0">
-            <div className="pointer-events-auto relative flex flex-col  w-full md:min-h-0 min-h-screen px-4 pt-8 pb-4 md:py-8 bg-white md:max-w-[28.125rem] lg:max-w-[34.5rem]  md:px-8 md:rounded-[1.875rem]">
+          <div className="absolute w-full md:w-auto top-0 md:py-[7.5rem] pointer-events-none min-h-screen md:min-h-0">
+            <div className="pointer-events-auto absolute md:relative flex flex-col  w-full md:min-h-0 min-h-screen px-4 pt-8 pb-4 md:py-8 bg-white md:max-w-[28.125rem] lg:max-w-[34.5rem]  md:px-8 md:rounded-[1.875rem]">
               <CloseButton onClick={onClose} />
               <IntroText />
               <Input
