@@ -37,7 +37,9 @@ export default function CheckBoxes({ salary }) {
                   i + 1
                 }-ой год`}</span>
               ) : (
-                <span className="text-text-gray">{` в ${i + 1}-ый год`}</span>
+                <span className="text-text-gray">{` в ${i + 1}-${
+                  i === 2 ? "и" : "ы"
+                }й год`}</span>
               )}
             </label>
           </div>
