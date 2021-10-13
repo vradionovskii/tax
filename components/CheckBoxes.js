@@ -2,6 +2,8 @@ import { Fragment } from "react";
 import Checkbox from "./Checkbox";
 
 export default function CheckBoxes({ salary }) {
+  const numbersWithAltPretext = [2, 6, 7, 8];
+
   const yearlyDeduction = salary * 12 * 0.13;
   let maxTotalDeduction = 260000;
   const years = [];
@@ -30,7 +32,13 @@ export default function CheckBoxes({ salary }) {
             <label className="cursor-pointer" htmlFor={i}>
               {tax}
               {" рублей"}
-              <span className="text-text-gray">{` в ${i + 1}-ый год`}</span>
+              {numbersWithAltPretext.includes(i + (1 % 10)) ? (
+                <span className="text-text-gray">{` в${i === 1 ? "о" : ""} ${
+                  i + 1
+                }-ой год`}</span>
+              ) : (
+                <span className="text-text-gray">{` в ${i + 1}-ый год`}</span>
+              )}
             </label>
           </div>
           <hr className="border-[#DFE3E6] w-full" />

@@ -73,7 +73,7 @@ const Modal = ({ onClose, show }) => {
               >
                 Рассчитать
               </button>
-              {number && number > 9999 && <CheckBoxes salary={number} />}
+              {number && <CheckBoxes salary={number} />}
               <div className="items-center md:flex md:pt-6">
                 <p className="pb-6 pt-2 md:py-0 text-sm font-medium pr-[4.75rem]">
                   Что уменьшаем?
